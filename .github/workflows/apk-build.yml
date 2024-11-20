@@ -39,6 +39,11 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
+      - name: Setup Ninja and GTK
+        run: |
+          apt install ninja-build
+          apt install libgtk-3-dev
+
       - name: Flet Build APK
         run: |
           flutter config --no-analytics
