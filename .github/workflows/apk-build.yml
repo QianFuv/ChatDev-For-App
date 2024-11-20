@@ -30,11 +30,8 @@ jobs:
         with:
           flutter-version: 3.24.5
 
-      - name: Setup Java JDK
-        uses: actions/setup-java@v4
-        with:
-          distribution: "temurin"
-          java-version: "21"
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
 
       - name: Flet Build APK
         run: |
